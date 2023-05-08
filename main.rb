@@ -38,8 +38,8 @@ game = PlayingBoard.new()
 game.computer_generated_code
 puts game.board_array
 vrstica = 1
-stolpec = 0
 while(vrstica<game.board_array.length)
+    stolpec = 0
     puts "Enter four colors seperated by spaces, from left to right"
     #game.board_array[i] << gets.chomp.split(" ")
     userinput = gets.chomp.split(" ")
