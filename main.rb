@@ -41,7 +41,6 @@ vrstica = 1
 while(vrstica<game.board_array.length)
     stolpec = 0
     puts "Enter four colors seperated by spaces, from left to right"
-    #game.board_array[i] << gets.chomp.split(" ")
     userinput = gets.chomp.split(" ")
     puts game.board_array
     game.input_colors(vrstica, userinput)
