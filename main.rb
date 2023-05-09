@@ -64,12 +64,24 @@ class PlayingBoard
 end
 
 game = PlayingBoard.new()
-game.computer_generated_code
 puts game.board_array
-vrstica = 1
+vrstica = 0
+
+puts "Do you want to input the color code manually?(Answer with 'yes')"
+manuallyEnter = gets.chomp
+if manuallyEnter = "yes"
+    puts "Enter four colors seperated by spaces, from left to right"
+    userinput = gets.chomp
+    game.input_colors(vrstica, userinput)
+else 
+    vrstica = 1
+    game.computer_generated_code
+    
+end
+
 while(vrstica<game.board_array.length)
     stolpec = 0
-    puts "Enter four colors seperated by spaces, from left to right"
+    puts "It's your turn to guess. Enter four colors seperated by spaces, from left to right"
     userinput = gets.chomp.split(" ")
     puts game.board_array
     game.input_colors(vrstica, userinput)
